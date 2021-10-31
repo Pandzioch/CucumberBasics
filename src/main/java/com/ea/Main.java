@@ -3,6 +3,6 @@ package com.ea;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print("chuj siema");
+        System.out.print("siema");
     }
 }

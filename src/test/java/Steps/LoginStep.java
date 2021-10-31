@@ -16,14 +16,19 @@ public class LoginStep {
         System.out.println("checking if i see the text");
     }
 
-    @And("I enter the following for Login")
-    public void iEnterTheFollowingForLogin(DataTable table) {
-
-        List<List<String>> data = table.cells();
-
-        data.get(0).get(1);
-        System.out.println(data.get(1).get(1));
+    @And("I enter ([^\"]*) and ([^\"]*)$")
+    public void iEnterUsernameAndPassword(String username, String password) {
+        System.out.println("Username is: " +username);
+        System.out.println("Password is: " +password);
     }
+//    @And("I enter the following for Login")
+//    public void iEnterTheFollowingForLogin(DataTable table) {
+//
+//        List<List<String>> data = table.cells();
+//
+//        data.get(0).get(1);
+//        System.out.println(data.get(1).get(1));
+//    }
 //        //create an arraylist
 //        List<User> users = new ArrayList<User>();
 //        //store all users
@@ -54,4 +59,4 @@ public class LoginStep {
         public void iShouldSeeTheUserformPage () {
         }
 
-    }
+}
